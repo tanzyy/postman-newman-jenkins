@@ -1,0 +1,59 @@
+{
+	"variables": [],
+	"info": {
+		"name": "jsonplaceholdercom",
+		"_postman_id": "9bd9cf59-1866-2ed1-4543-571f0d57f3e6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"//tests[\"Body is correct\"] = responseBody === \"sunt aut\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://jsonplaceholder.typicode.com/posts",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 2000ms\"] = responseTime < 2000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://jsonplaceholder.typicode.com/posts/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
